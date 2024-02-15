@@ -2,7 +2,6 @@ import React from "react";
 import { useSession, signOut, getSession } from 'next-auth/react';
 
 const account = () => {
-    //using required true will redirect us automatically
     const { data: session, status } = useSession();
 
     if (status === 'authenticated') {
@@ -28,12 +27,13 @@ export default account;
 //redirect a user if not logged in
 
 export const getServerSideProps = async (context) => {
-    const session = await getSession(context);
-    if (!session){
-        return {
-            redirect: {
-                destination: '/login'
-            }
-        }
+  const session = await getSession(context);
+  if (!session){
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false,
+      }
     }
+  }
 }
