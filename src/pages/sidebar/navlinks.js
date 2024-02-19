@@ -4,7 +4,7 @@ import Link from "next/link";
 const links = [
     
     { name: 'Home', href: '/home', icon: HomeIcon },
-    { name: 'Account', href: '/account', icon: UserGroupIcon },
+    { name: 'Account', href: '/login', icon: UserGroupIcon },
 ]
 
 const NavLinks = () => {

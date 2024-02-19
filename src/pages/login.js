@@ -8,10 +8,15 @@ function Login() {
     return (
       <div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <p>Welcome, {session.user.name}</p>
+          <p>Hi, {session.user.name}!</p>
           <img src={session.user.image} alt="" style={{ borderRadius: '50px', width: '30px', height: '30px', marginLeft: '10px' }} />
         </div>
         <div>
+          <br></br>
+          <p>Manage your account here.</p>
+        </div>
+        <div>
+          <br></br>
           <button onClick={() => signOut()}>Sign Out</button>
         </div>
       </div>
@@ -27,19 +32,3 @@ function Login() {
 }
 
 export default Login;
-
-export const getServerSideProps = async (context) => {
-  const session = await getSession(context);
-  if (!session) {
-    return {
-      redirect: {
-        destination: '/home',
-        permanent: false,
-      },
-    };
-  }
-
-  return {
-    props: {},
-  };
-};

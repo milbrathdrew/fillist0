@@ -24,7 +24,7 @@ export default function Home() {
               Fillist.io
             </h1>
           </div>
-          <Link href="/login" className="rounded-full bg-purple-800 text-white p-2 mt-2 shadow-lg hover:shadow-xl">go to login</Link>
+          <Link href="/home" className="rounded-full bg-purple-800 text-white p-2 mt-2 shadow-lg hover:shadow-xl">Enter</Link>
         </div>
       </div>
     </>

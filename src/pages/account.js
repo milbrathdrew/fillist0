@@ -1,4 +1,7 @@
+/*
 import React from "react";
+import Link from 'next/link';
+
 import { useSession, signOut, getSession } from 'next-auth/react';
 
 const account = () => {
@@ -16,6 +19,8 @@ const account = () => {
         return (
             <div>
                 <p>You are not signed in.</p>
+                <br></br>
+                <Link href="/login" className="rounded-full bg-purple-800 text-white p-2 mt-2 shadow-lg hover:shadow-xl">Login</Link>
             </div>
         );
     }
@@ -36,4 +41,5 @@ export const getServerSideProps = async (context) => {
       }
     }
   }
-}
+};
+*/
